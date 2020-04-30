@@ -2,14 +2,16 @@ import 'package:flutter/material.dart';
 
 import 'Pages/homePage.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(PayPalApp());
 
-class MyApp extends StatelessWidget {
+class PayPalApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: SafeArea(
+        child: HomePage(),
+      ),
     );
   }
 }
